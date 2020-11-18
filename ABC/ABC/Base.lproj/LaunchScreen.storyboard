@@ -12,11 +12,44 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="mI4-we-6TU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abclo" translatesAutoresizingMaskIntoConstraints="NO" id="0Z1-Rd-96f">
+                                <rect key="frame" x="0.0" y="297" width="414" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Z1-Rd-96f" secondAttribute="height" multiplier="225:67" id="2WR-IL-dnZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with people near you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Tn6-py-tAd">
+                                <rect key="frame" x="20" y="445" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with  💚   by Cédric Bahirwe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="c98-mu-CCf">
+                                <rect key="frame" x="20" y="813" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zSp-tP-cx0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="D5P-Rx-8wv" firstAttribute="bottom" secondItem="c98-mu-CCf" secondAttribute="bottom" constant="9" id="3EE-Pz-STj"/>
+                            <constraint firstItem="Tn6-py-tAd" firstAttribute="top" secondItem="0Z1-Rd-96f" secondAttribute="bottom" constant="25" id="DPh-Mb-D4q"/>
+                            <constraint firstItem="Tn6-py-tAd" firstAttribute="leading" secondItem="mI4-we-6TU" secondAttribute="leadingMargin" id="Fi2-aQ-6PU"/>
+                            <constraint firstItem="c98-mu-CCf" firstAttribute="centerX" secondItem="D5P-Rx-8wv" secondAttribute="centerX" id="GP0-Oe-LuR"/>
+                            <constraint firstItem="0Z1-Rd-96f" firstAttribute="width" secondItem="mI4-we-6TU" secondAttribute="width" id="I53-Zw-KLb"/>
+                            <constraint firstItem="c98-mu-CCf" firstAttribute="leading" secondItem="mI4-we-6TU" secondAttribute="leadingMargin" id="JhM-Ts-AHx"/>
+                            <constraint firstItem="Tn6-py-tAd" firstAttribute="centerX" secondItem="0Z1-Rd-96f" secondAttribute="centerX" id="L2m-86-57F"/>
+                            <constraint firstItem="0Z1-Rd-96f" firstAttribute="centerY" secondItem="mI4-we-6TU" secondAttribute="centerY" multiplier="0.8" id="Xrk-cY-mxe"/>
+                            <constraint firstItem="0Z1-Rd-96f" firstAttribute="centerX" secondItem="D5P-Rx-8wv" secondAttribute="centerX" id="rhm-kb-XMF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D5P-Rx-8wv"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +57,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="abclo" width="1000" height="561"/>
+    </resources>
 </document>
