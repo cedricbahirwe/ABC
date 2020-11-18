@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -13,31 +13,30 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mI4-we-6TU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abclo" translatesAutoresizingMaskIntoConstraints="NO" id="0Z1-Rd-96f">
-                                <rect key="frame" x="0.0" y="297" width="414" height="123"/>
+                                <rect key="frame" x="0.0" y="144.5" width="320" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Z1-Rd-96f" secondAttribute="height" multiplier="225:67" id="2WR-IL-dnZ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with people near you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Tn6-py-tAd">
-                                <rect key="frame" x="20" y="445" width="374" height="38.5"/>
+                                <rect key="frame" x="16" y="264.5" width="288" height="38.5"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with  💚   by Cédric Bahirwe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="c98-mu-CCf">
-                                <rect key="frame" x="20" y="813" width="374" height="40"/>
+                                <rect key="frame" x="16" y="431" width="288" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zSp-tP-cx0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="D5P-Rx-8wv" firstAttribute="bottom" secondItem="c98-mu-CCf" secondAttribute="bottom" constant="9" id="3EE-Pz-STj"/>
                             <constraint firstItem="Tn6-py-tAd" firstAttribute="top" secondItem="0Z1-Rd-96f" secondAttribute="bottom" constant="25" id="DPh-Mb-D4q"/>
