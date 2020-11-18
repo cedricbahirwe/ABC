@@ -21,6 +21,10 @@
 		8241B2C0256504FD00B47F2C /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241B2B6256504FD00B47F2C /* MessageTableViewCell.swift */; };
 		8241B2C1256504FD00B47F2C /* ClientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8241B2B7256504FD00B47F2C /* ClientTableViewCell.xib */; };
 		8241B2C22565066800B47F2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241B29A2565018E00B47F2C /* AppDelegate.swift */; };
+		82F9BAFB2565159400F5AE28 /* MessagesMultipeerConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9BAFA2565159400F5AE28 /* MessagesMultipeerConnectivity.swift */; };
+		82F9BAFD256515CB00F5AE28 /* MessagesTableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9BAFC256515CB00F5AE28 /* MessagesTableViews.swift */; };
+		82F9BAFF256515FC00F5AE28 /* MessagesTextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9BAFE256515FC00F5AE28 /* MessagesTextViews.swift */; };
+		82F9BB012565162E00F5AE28 /* MessagesHelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9BB002565162E00F5AE28 /* MessagesHelperMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		8241B2B5256504FD00B47F2C /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		8241B2B6256504FD00B47F2C /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		8241B2B7256504FD00B47F2C /* ClientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientTableViewCell.xib; sourceTree = "<group>"; };
+		82F9BAFA2565159400F5AE28 /* MessagesMultipeerConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesMultipeerConnectivity.swift; sourceTree = "<group>"; };
+		82F9BAFC256515CB00F5AE28 /* MessagesTableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViews.swift; sourceTree = "<group>"; };
+		82F9BAFE256515FC00F5AE28 /* MessagesTextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTextViews.swift; sourceTree = "<group>"; };
+		82F9BB002565162E00F5AE28 /* MessagesHelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesHelperMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 				8241B2B0256504FC00B47F2C /* MainViewController.swift */,
 				8241B2B5256504FD00B47F2C /* MessagesViewController.swift */,
 				8241B2B6256504FD00B47F2C /* MessageTableViewCell.swift */,
+				82F9BAF92565157600F5AE28 /* MessagesExtension */,
 				8241B2AF256504FC00B47F2C /* UserTableViewCell.swift */,
 				8241B2AE256504FC00B47F2C /* UserTableViewCell.xib */,
 				8241B2B3256504FC00B47F2C /* ViewController.swift */,
@@ -89,6 +98,17 @@
 				8241B2A82565019100B47F2C /* Info.plist */,
 			);
 			path = ABC;
+			sourceTree = "<group>";
+		};
+		82F9BAF92565157600F5AE28 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				82F9BAFA2565159400F5AE28 /* MessagesMultipeerConnectivity.swift */,
+				82F9BAFC256515CB00F5AE28 /* MessagesTableViews.swift */,
+				82F9BAFE256515FC00F5AE28 /* MessagesTextViews.swift */,
+				82F9BB002565162E00F5AE28 /* MessagesHelperMethods.swift */,
+			);
+			path = MessagesExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8241B2BD256504FD00B47F2C /* ViewController.swift in Sources */,
+				82F9BB012565162E00F5AE28 /* MessagesHelperMethods.swift in Sources */,
+				82F9BAFD256515CB00F5AE28 /* MessagesTableViews.swift in Sources */,
 				8241B2BB256504FD00B47F2C /* CustomMovieController.swift in Sources */,
+				82F9BAFB2565159400F5AE28 /* MessagesMultipeerConnectivity.swift in Sources */,
 				8241B2C0256504FD00B47F2C /* MessageTableViewCell.swift in Sources */,
+				82F9BAFF256515FC00F5AE28 /* MessagesTextViews.swift in Sources */,
 				8241B2C22565066800B47F2C /* AppDelegate.swift in Sources */,
 				8241B2BE256504FD00B47F2C /* ClientTableViewCell.swift in Sources */,
 				8241B2B9256504FD00B47F2C /* UserTableViewCell.swift in Sources */,
