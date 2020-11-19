@@ -45,7 +45,7 @@ class MessagesViewController: UIViewController {
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.containerView.alpha = 1
         setupTableView()
         setupLayouts()
         setupMultipeering()
