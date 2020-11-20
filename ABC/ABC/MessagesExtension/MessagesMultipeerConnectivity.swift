@@ -50,6 +50,46 @@ extension MessagesViewController : MCSessionDelegate, MCBrowserViewControllerDel
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         DispatchQueue.main.async {[unowned self] in
+            
+            
+//            do {
+//                print(data.count, "the number")
+//                let formattedData = Data([data[1]])
+//                let mainData = Data([data[0]])
+//                let receivedData = try JSONDecoder().decode(LoadType.self, from: Data(formattedData))
+//                switch receivedData.type {
+//                case .message:
+//                    do {
+//                        var message = try  JSONDecoder().decode(Load<Message>.self, from: mainData)
+//                        print(data.count)
+//                        message.data.isMe.toggle()
+//                        self.messages.append(message.data)
+//                    } catch {
+//                        print("Unable to decode the message")
+//                    }
+//                case .image:
+//                    do {
+//                        let image = try  JSONDecoder().decode(Load<Image>.self, from: mainData)
+//                        print(image.data.name ?? "No image name")
+//                    } catch {
+//                        print("Unable to decode the image")
+//                    }
+//                case .song:
+//                    do {
+//                        let song = try  JSONDecoder().decode(Load<Song>.self, from: mainData)
+//                        print(song.data.name)
+//                    } catch {
+//                        print("Unable to decode the song")
+//                    }
+//                }
+//            } catch {
+//                print("Unable to decode the data")
+//            }
+            
+            
+            
+            
+            
             do {
                 var message = try  JSONDecoder().decode(Load<Message>.self, from: data)
                 print(data.count)
@@ -60,6 +100,7 @@ extension MessagesViewController : MCSessionDelegate, MCBrowserViewControllerDel
                 do {
                     let image = try  JSONDecoder().decode(Load<Image>.self, from: data)
                     print(image.data.name ?? "No image name")
+                    self.sentImageView.image = UIImage(data: image.data.image)
                 } catch {
                     print("Unable to decode the image")
                     do {

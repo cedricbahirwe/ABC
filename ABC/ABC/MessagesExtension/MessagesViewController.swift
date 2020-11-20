@@ -61,6 +61,7 @@ class MessagesViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
     
+    @IBOutlet weak var sentImageView: UIImageView!
     @IBOutlet weak var textViewContainerheight: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var textView: UITextView!
@@ -70,6 +71,7 @@ class MessagesViewController: UIViewController {
     var peerID: MCPeerID!
     var mcSession: MCSession!
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
+    let image: UIImage = #imageLiteral(resourceName: "me")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.containerView.alpha = 1
@@ -138,7 +140,7 @@ extension MessagesViewController {
     
     
     @IBAction func sendImage(_ sender: UIButton) {
-        
+        sendImage(self.image)
     }
     
     @IBAction func sendMessage(_ sender: UIButton) {
@@ -170,9 +172,11 @@ extension MessagesViewController {
             do {
                 
                 let messageLoad = Load<Message>(type: .message, data: message)
-                let data = try JSONEncoder().encode(messageLoad)
-                let loadType = try JSONEncoder().encode(messageLoad.type)
+                var data = try JSONEncoder().encode(messageLoad)
+                
+//                let loadType = try JSONEncoder().encode(messageLoad.type)
 //                data.append(loadType)
+                
                 try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
                 
             } catch let error as NSError {
@@ -192,7 +196,11 @@ extension MessagesViewController {
                 guard let imageData = image.jpegData(compressionQuality: 0) else { return }
                 let imageLoad = Load<Image>(type: .image, data: Image(name: "image\(imageCount)", image: imageData))
                 imageCount += 1
-                let data = try JSONEncoder().encode(imageLoad)
+                var data = try JSONEncoder().encode(imageLoad)
+                
+//                let loadType = try JSONEncoder().encode(imageLoad.type)
+//                data.append(loadType)
+                
                 try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
             } catch let error as NSError {
                 imageCount -= 1
@@ -211,7 +219,12 @@ extension MessagesViewController {
                 let songData = try Data(contentsOf: songURL)
                 let songLoad = Load<Song>(type: .song, data: Song(name: "song\(imageCount)", song: songData))
                 imageCount += 1
-                let data = try JSONEncoder().encode(songLoad)
+                var data = try JSONEncoder().encode(songLoad)
+                
+//                let loadType = try JSONEncoder().encode(songLoad.type)
+//                data.append(loadType)
+                
+                
                 try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
             } catch let error as NSError {
                 imageCount -= 1
