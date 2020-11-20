@@ -123,16 +123,28 @@
                         <viewLayoutGuide key="safeArea" id="M3O-dh-rjg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" largeTitleDisplayMode="always" id="ABK-Q1-zCd">
-                        <barButtonItem key="rightBarButtonItem" id="VKK-TY-pY6">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kch-4G-gxO">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send"/>
-                                <connections>
-                                    <action selector="sendMessage:" destination="CZw-gz-MCb" eventType="touchUpInside" id="bKN-gN-VX7"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="bjn-0e-niE">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WQA-jz-LM7">
+                                    <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Image"/>
+                                    <connections>
+                                        <action selector="sendImage:" destination="CZw-gz-MCb" eventType="touchUpInside" id="3Bk-t3-qe2"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem id="VKK-TY-pY6">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kch-4G-gxO">
+                                    <rect key="frame" x="202" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Send"/>
+                                    <connections>
+                                        <action selector="sendMessage:" destination="CZw-gz-MCb" eventType="touchUpInside" id="bKN-gN-VX7"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomConstraint" destination="0dt-CL-Dxf" id="hcp-uI-rBt"/>

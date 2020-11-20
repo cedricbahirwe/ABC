@@ -87,7 +87,6 @@
 				8241B2B1256504FC00B47F2C /* CustomMovieController.swift */,
 				8241B2B2256504FC00B47F2C /* Main.storyboard */,
 				8241B2B0256504FC00B47F2C /* MainViewController.swift */,
-				8241B2B5256504FD00B47F2C /* MessagesViewController.swift */,
 				8241B2B6256504FD00B47F2C /* MessageTableViewCell.swift */,
 				82F9BAF92565157600F5AE28 /* MessagesExtension */,
 				8241B2AF256504FC00B47F2C /* UserTableViewCell.swift */,
@@ -103,6 +102,7 @@
 		82F9BAF92565157600F5AE28 /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				8241B2B5256504FD00B47F2C /* MessagesViewController.swift */,
 				82F9BAFA2565159400F5AE28 /* MessagesMultipeerConnectivity.swift */,
 				82F9BAFC256515CB00F5AE28 /* MessagesTableViews.swift */,
 				82F9BAFE256515FC00F5AE28 /* MessagesTextViews.swift */,

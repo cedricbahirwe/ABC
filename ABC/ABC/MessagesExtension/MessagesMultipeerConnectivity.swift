@@ -51,11 +51,24 @@ extension MessagesViewController : MCSessionDelegate, MCBrowserViewControllerDel
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         DispatchQueue.main.async {[unowned self] in
             do {
-                var message = try  JSONDecoder().decode(Message.self, from: data)
-                message.isMe.toggle()
-                self.messages.append(message)
+                var message = try  JSONDecoder().decode(Load<Message>.self, from: data)
+                print(data.count)
+                message.data.isMe.toggle()
+                self.messages.append(message.data)
             } catch {
                 print("Unable to decode the message")
+                do {
+                    let image = try  JSONDecoder().decode(Load<Image>.self, from: data)
+                    print(image.data.name ?? "No image name")
+                } catch {
+                    print("Unable to decode the image")
+                    do {
+                        let song = try  JSONDecoder().decode(Load<Song>.self, from: data)
+                        print(song.data.name)
+                    } catch {
+                        print("Unable to decode the song")
+                    }
+                }
             }
         }
     }
