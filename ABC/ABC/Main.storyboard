@@ -40,6 +40,13 @@
                                     <constraint firstItem="zNF-eQ-3MX" firstAttribute="leading" secondItem="M8k-Cp-bET" secondAttribute="leading" constant="10" id="xu5-92-X5c"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J84-p0-jjl">
+                                <rect key="frame" x="304" y="752" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="NL4-2S-mhD"/>
+                                    <constraint firstAttribute="height" constant="60" id="Xv7-Yh-tiI"/>
+                                </constraints>
+                            </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7K-Mn-qwo">
                                 <rect key="frame" x="0.0" y="214" width="414" height="682"/>
                                 <subviews>
@@ -109,6 +116,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="M3O-dh-rjg" firstAttribute="bottom" secondItem="M8k-Cp-bET" secondAttribute="bottom" id="0dt-CL-Dxf"/>
+                            <constraint firstItem="M3O-dh-rjg" firstAttribute="trailing" secondItem="J84-p0-jjl" secondAttribute="trailing" constant="50" id="5pL-32-NMv"/>
+                            <constraint firstItem="M3O-dh-rjg" firstAttribute="bottom" secondItem="J84-p0-jjl" secondAttribute="bottom" constant="50" id="ClS-VC-42Q"/>
                             <constraint firstAttribute="bottom" secondItem="ih3-t2-TY7" secondAttribute="bottom" id="DRT-Bx-bVX"/>
                             <constraint firstItem="M3O-dh-rjg" firstAttribute="trailing" secondItem="ih3-t2-TY7" secondAttribute="trailing" id="G6Q-ey-gNI"/>
                             <constraint firstItem="f7K-Mn-qwo" firstAttribute="trailing" secondItem="M3O-dh-rjg" secondAttribute="trailing" id="LZa-87-CjK"/>
@@ -123,21 +132,34 @@
                         <viewLayoutGuide key="safeArea" id="M3O-dh-rjg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" largeTitleDisplayMode="always" id="ABK-Q1-zCd">
-                        <barButtonItem key="rightBarButtonItem" id="VKK-TY-pY6">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kch-4G-gxO">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send"/>
-                                <connections>
-                                    <action selector="sendMessage:" destination="CZw-gz-MCb" eventType="touchUpInside" id="bKN-gN-VX7"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="bjn-0e-niE">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WQA-jz-LM7">
+                                    <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Image"/>
+                                    <connections>
+                                        <action selector="sendImage:" destination="CZw-gz-MCb" eventType="touchUpInside" id="3Bk-t3-qe2"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem id="VKK-TY-pY6">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kch-4G-gxO">
+                                    <rect key="frame" x="202" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Message"/>
+                                    <connections>
+                                        <action selector="sendMessage:" destination="CZw-gz-MCb" eventType="touchUpInside" id="bKN-gN-VX7"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomConstraint" destination="0dt-CL-Dxf" id="hcp-uI-rBt"/>
                         <outlet property="connectionStatus" destination="khS-t8-82P" id="4Fm-yy-wbm"/>
                         <outlet property="containerView" destination="f7K-Mn-qwo" id="amU-CW-thT"/>
+                        <outlet property="sentImageView" destination="J84-p0-jjl" id="qLg-MB-g0w"/>
                         <outlet property="tableView" destination="ih3-t2-TY7" id="Yp3-FS-AvD"/>
                         <outlet property="textView" destination="zNF-eQ-3MX" id="aqh-fa-g5l"/>
                         <outlet property="textViewContainerheight" destination="Jwc-It-CTq" id="ZnJ-HQ-Coj"/>
