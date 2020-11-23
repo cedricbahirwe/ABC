@@ -172,11 +172,7 @@ extension MessagesViewController {
             do {
                 
                 let messageLoad = Load<Message>(type: .message, data: message)
-                var data = try JSONEncoder().encode(messageLoad)
-                
-//                let loadType = try JSONEncoder().encode(messageLoad.type)
-//                data.append(loadType)
-                
+                let data = try JSONEncoder().encode(messageLoad)
                 try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
                 
             } catch let error as NSError {
@@ -196,11 +192,7 @@ extension MessagesViewController {
                 guard let imageData = image.jpegData(compressionQuality: 0) else { return }
                 let imageLoad = Load<Image>(type: .image, data: Image(name: "image\(imageCount)", image: imageData))
                 imageCount += 1
-                var data = try JSONEncoder().encode(imageLoad)
-                
-//                let loadType = try JSONEncoder().encode(imageLoad.type)
-//                data.append(loadType)
-                
+                let data = try JSONEncoder().encode(imageLoad)
                 try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
             } catch let error as NSError {
                 imageCount -= 1
@@ -219,12 +211,7 @@ extension MessagesViewController {
                 let songData = try Data(contentsOf: songURL)
                 let songLoad = Load<Song>(type: .song, data: Song(name: "song\(imageCount)", song: songData))
                 imageCount += 1
-                var data = try JSONEncoder().encode(songLoad)
-                
-//                let loadType = try JSONEncoder().encode(songLoad.type)
-//                data.append(loadType)
-                
-                
+                let data = try JSONEncoder().encode(songLoad)
                 try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
             } catch let error as NSError {
                 imageCount -= 1
